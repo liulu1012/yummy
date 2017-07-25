@@ -1,9 +1,136 @@
-body{
-  margin: 0;
+*{
+	margin: 0;
+	padding: 0;
 }
+body{
+  box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+.home{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(right top,#FF5196,#F87062);
+}
+
+.home .logo-yummy{
+	width: 33.8vw;
+	margin: 0 auto;
+	padding: 11.56vh 0 5.21vh 0;
+}
+.home h1,.home h4{
+	color: white;
+	font-size: 40px;
+	font-weight: normal;
+	line-height: 16.67vh;
+}
+.home h4{
+	font-size: 20px;
+	line-height: 8vh;
+}
+.home .home_btn{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+.home .home_btn a{
+	width: 41.67vw;
+	height: 8.75vh;
+	color: #F67361;
+	font-size: 18px;
+	text-align: center;
+	margin: 14.06vh 0;
+	line-height: 8.75vh;
+	background: white;
+	border-radius: 4px;
+	/*margin-top: 4.5vh;*//*	margin-left: 5.55vw;*/
+}
+.home .home_btn a:last-child{
+	margin-left: 5.56vw;
+}
+
+/*signup*/
+.signup,.loginin{
+	width: 100%;
+	background: linear-gradient(right top,#ff5294,#f76e64);
+}
+.signup-top,.loginin-top{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 7.29vh;
+}
+.signup-top>i,.loginin-top>i{
+	margin-left: 5.56vw; /*60*/
+	color: white;
+}
+.signup-top>span,.loginin-top>span{
+	height: 2.08vh;
+	color: white;
+}
+
+
+
+.signup-botm,.loginin-botm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.signup-botm>a,.loginin-botm>a{
+	line-height: 8.59vh; /* 165*/
+	padding-bottom: 2.9vh; /*56*/
+	color: white
+}
+.signup-form>button,.signup-form>div input,.loginin-form>div input,.loginin-form>button{
+	width: 77.78vw; /*840*/
+	line-height: 8.75vh; /*168*/
+	border: 0
+}
+.signup-form>button{
+	margin-top: 1.56vh; /*30*/
+	background: white;
+	color: #d89e9a;
+}
+.signup-form>div input,.loginin-form>div input{
+	text-indent: 5.55vw;
+	outline: none
+}
+.signup-form{
+	margin-top: 10.625vh ; /*204*/
+}
+
+/*h3*/
+.signup-botm>h3,.loginin-botm>h3{
+	line-height: 2.34vh; /*45*/
+	color: white;
+}
+.signup-botm>h1,.loginin-botm>h1{
+	line-height: 9.68vh; /*186*/
+	margin-top: 10.68vh; /*205*/
+	color: white;
+}
+
+/*loginin*/
+.loginin-form{
+	margin-top: 13.96vh; /*268*/
+}
+<<<<<<< HEAD
 
 .home{
   width: 100%;
   height: 100vh;
   background-color: pink
 }
+=======
+.loginin-form>button{
+	margin-top: 15.73vh; /*302*/
+	background: white;
+	color: #d89e9a;
+}
+>>>>>>> 13bff13b95701f60accba8e039b56010d260d522
