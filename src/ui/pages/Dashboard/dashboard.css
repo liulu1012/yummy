@@ -1,0 +1,52 @@
+.dash-board{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.dash-board-wrap{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.dash-board-wrap>*{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.dash-board-wrap>div{
+  height: 240px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 90%;
+}
+
+
+
+/*dash-board-userinfo css*/
+.dash-board-userinfo{
+  display: flex;
+  height: 70px;
+  border: 1px solid blue
+}
+.dash-board-userinfo img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dash-board-actions{
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.dash-board-dishes{
+  display: flex;
+  flex-flow: 1;
+  justify-content: space-around;
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
+}
