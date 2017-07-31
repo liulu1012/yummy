@@ -5,7 +5,7 @@ import './sidebar.css'
 
 class Sidebar extends React.Component{
   state = {
-    isOpen : false
+    isOpen : true
   }
   closeBmMenu = () => {
     this.setState({
