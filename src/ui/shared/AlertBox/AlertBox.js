@@ -1,18 +1,15 @@
 import React from 'react'
 import './alert-box.css'
+import store from '../../../redux/store'
+import {connect} from 'react-redux'
 
 class AlertBox extends React.Component{
-  state = {
-    showAlert : true
-  }
   closeAlert = () => {
-    this.setState({
-      showAlert:false
-    })
+    console.log(store.getState())
   }
   render(){
     return(
-      <div className={this.state.showAlert?"alert-box show":"alert-box"}>
+      <div className={this.props.showAlert?"alert-box show":"alert-box"}>
         <div className='alert-content-card'>
           <div className='alert-msg'>
             报错信息
@@ -26,4 +23,8 @@ class AlertBox extends React.Component{
   }
 }
 
-export default AlertBox
+const mapStateToProps = (state) => ({
+  showAlert:state.showAlert
+})
+
+export default connect(mapStateToProps)(AlertBox)
