@@ -10,12 +10,14 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+import AlertBox from './ui/shared/AlertBox/AlertBox'
 
 
 class App extends React.Component{
   render(){
     return(
       <div>
+        <AlertBox />
         <Router>
           <div>
             <Route render = {({location}) => {

@@ -1,9 +1,23 @@
 import React from 'react'
 import TitleHeader from '../../shared/TitleHeader/TitleHeader'
 import './login.css'
+import Settings from '../../../settings.js'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 class Login extends React.Component{
+  login = (e) => {
+    e.preventDefault()
+    let username = this.usernameInput.value
+    let password = this.passwordInput.value
+    let data = {username,password}
+    axios.post(`${Settings.host}/user/login`,data)
+      .then(res => {
+        console.log(res.data)
+        this.props.history.push('/dashboard')
+      })
+      .catch(err => console.log(err.response.data.msg))
+  }
   render(){
     return(
       <div>
@@ -20,8 +34,8 @@ class Login extends React.Component{
           <form className='login-form'>
             <div className='login-text-inputs'>
               <div className='login-text-inputs-inner'>
-                <input type='text' placeholder='用户名'/>
-                <input type='password' placeholder='密码'/>
+                <input type='text' placeholder='用户名' ref={value => this.usernameInput = value}/>
+                <input type='password' placeholder='密码' ref={value => this.passwordInput = value}/>
               </div>
             </div>
             <div className='login-actions'>

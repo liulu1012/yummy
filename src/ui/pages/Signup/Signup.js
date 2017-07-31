@@ -10,9 +10,8 @@ class Signup extends React.Component{
   signup = (e) => {
     e.preventDefault()
     let username = this.userNameSignup.value
-    let email = this.emailSignup.value
     let password = this.passwordSignup.value
-    let data = {username,email,password}
+    let data = {username,password}
     axios.post(`${Settings.host}/user/signup`,data)
       .then(res => {
         if(res.data.username){
@@ -41,7 +40,7 @@ class Signup extends React.Component{
             <div className='signup-text-inputs'>
               <div className='signup-text-inputs-inner'>
                 <input type='text' placeholder='用户名' ref={value=>this.userNameSignup=value}/>
-                <input type='text' placeholder='Email' ref={value=>this.emailSignup=value}/>
+                <input type='text' placeholder='Email'/>
                 <input type='password' placeholder='密码' ref={value=>this.passwordSignup=value}/>
                 <input type='password' placeholder='再次输入密码'/>
               </div>
