@@ -5,6 +5,7 @@ import TitleHeader from '../../shared/TitleHeader/TitleHeader.js'
 import Settings from '../../../settings'
 import axios from 'axios'
 import store from '../../../redux/store.js'
+import {connect} from 'react-redux'
 
 class Signup extends React.Component{
   signup = (e) => {
@@ -21,7 +22,9 @@ class Signup extends React.Component{
           this.signupForm.reset()
         }
       })
-      .catch(err=>console.log(err))
+      .catch(err=>{
+        this.props.dispatch({type:'SHOW_ALERT',msg:err.response.data.msg})
+      })
   }
   render(){
     return(
